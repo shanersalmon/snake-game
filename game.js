@@ -195,11 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Draw snake
         snake.forEach((segment, index) => {
-            // Head is darker green, body is lighter green
+            // Head is darker red, body is lighter red
             if (index === 0) {
-                ctx.fillStyle = '#388E3C'; // Dark green for head
+                ctx.fillStyle = '#C62828'; // Dark red for head
             } else {
-                ctx.fillStyle = '#4CAF50'; // Light green for body
+                ctx.fillStyle = '#E53935'; // Light red for body
             }
             
             ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Add inner square to body segments for visual effect
             if (index > 0) {
-                ctx.fillStyle = '#66BB6A'; // Lighter green for inner square
+                ctx.fillStyle = '#EF5350'; // Lighter red for inner square
                 const innerPadding = 4;
                 ctx.fillRect(
                     segment.x * gridSize + innerPadding,
